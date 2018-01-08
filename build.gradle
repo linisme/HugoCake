@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'net.idik.crepecake:plugin:0.0.3'
+        classpath 'com.novoda:bintray-release:0.8.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,4 +25,10 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+subprojects {
+    group 'net.idik.crepecake.hugo'
+    version '0.0.1'
+    apply from: '../configs.gradle'
 }

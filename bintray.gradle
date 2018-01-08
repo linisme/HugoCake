@@ -1,0 +1,15 @@
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'idik-net'
+    groupId = group
+    artifactId = archivesBaseName
+    publishVersion = project.version
+    desc = 'A "hugo" implement with CrepeCake aop engine.'
+    website = 'https://github.com/MEiDIK/HugoCake'
+    repoName = 'HugoCake'
+    bintrayUser = props.getProperty("bintray.user")
+    bintrayKey = props.getProperty("bintray.apikey")
+    dryRun = false
+}
+
